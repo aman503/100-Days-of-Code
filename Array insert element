@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[7],n,pos,ele;
+    cin>>n;//how many elemnet i want to input
+    for(int i =0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"enter the emement you want to add in the arr and the position";
+    cin>>pos>>ele;
+    for(int i =n-1;i>=pos;i--)
+    {
+        arr[i+1]=arr[i];
+    }
+    arr[pos]=ele;
+    n=n+1;
+     for(int i =0;i<n;i++)
+    {
+        cout<<arr[i];
+    }
+    
+
+    return 0;
+}
