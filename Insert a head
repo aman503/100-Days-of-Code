@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *next;
+}*head;
+void createlist(int);
+void display();
+void beg(int);
+
+int main()
+{
+    int n,data;
+    printf("enter the total number of nodes");
+    scanf("%d",&n);
+    createlist(n);
+    
+    printf("display list");
+    display();
+    printf("enter data to be inserted");
+    scanf("%d",&data);
+    beg(data);
+    printf("display");
+    display();
+    
+
+    return 0;
+}
+void createlist(int n)
+{
+    struct node *newnode, *temp;
+    int data,i;
+    head = (struct node *)malloc(sizeof(struct node));
+    if(head==NULL)
+    printf("not allocate memory");
+    else
+    {
+        printf("enter data");
+        scanf("%d",&data);
+        head->data = data;
+        head->next = NULL;
+        temp = head;
+        for(i=2;i<=n;i++)
+        {
+            
+            newnode = (struct node *)malloc(sizeof(struct node));
+            if(newnode==NULL)
+            {
+                printf("not allocate memory");
+                
+            }
+            else
+            {
+                printf("enter data");
+                scanf("%d",&data);
+            newnode->data = data;
+            newnode->next = NULL;
+            temp->next = newnode;
+            temp = newnode;
+            }
+        }
+    }
+}
+       void beg(int data)
+       {
+           struct node *newnode;
+           newnode = (struct node *)malloc(sizeof(struct node));
+           newnode->data = data;
+           newnode->next = head;
+           head = newnode;
+       }
+       void display()
+       {
+           struct node *temp;
+           if(head==NULL)
+           printf("list is empty");
+           else
+           {
+               temp = head;
+               while(temp!=NULL)
+               {
+                   printf("Data=%d",temp->data);
+                   temp = temp->next;
+               }
+           }
+       }
+
