@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int m;
+    cin>>m;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int q;
+    cin>>q;
+    int x[q];
+    for(int j=0;j<q;j++)
+    {
+        cin>>x[j];
+    }
+    int count=0;
+    int s[n];
+    int j=0;
+    for(int i=0;i<Q;i++)
+    {
+        
+        for( j=0;j<N;j++)
+        {
+           s[j]=(Query[i]+A[j])%M;
+          
+          
+        }
+         count=s[0];
+    for(int i=1;i<n;i++)
+    {
+     if(count<s[i])
+     {
+         count=s[i];
+     }
+    }
+    
+    
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]==count)
+        {
+           
+            break;
+        }
+    }
+        
+       
+    
+   
+}
+    
+    return 0;
+}
+
+
+
