@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   // printf("Hello World");
+   long long int s;
+   cin>>s;
+   long long int p=s;
+   cout<<"p is"<<p<<endl;
+   int n=0;
+   while(p!=0)
+   {
+       p=p/10;
+       n++;
+   }
+   cout<<"n is"<<n<<endl;
+  int a[n];
+  int i=n-1;
+  cout<<"i is"<<i<<endl;
+  int rem=0;
+  while(s!=0)
+  {
+      rem=0;
+     rem=s%10;
+     cout<<"rem is"<<rem<<endl;
+     a[i]=rem;
+     cout<<" a is"<<a[i]<<endl;
+     //cout<<
+     s=s/10;
+     i--;
+      
+  }
+  for(int j=0;j<n;j++)
+  {
+      cout<<a[j]<<" ";
+  }
+  
+   
+   
+
+    return 0;
+}
+
