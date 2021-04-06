@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int lengthOfLastWord(std::string s) {
+        int len = 0;
+        int idx = s.size() - 1;
+        while (idx >= 0 && s[idx] == ' ') {
+            --idx;
+        }
+        while (idx >= 0 && std::isalpha(s[idx])) {
+            --idx;
+            ++len;
+        }
+        return len;
+    }
+};
