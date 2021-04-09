@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+   // printf("Hello World");
+   int arr[10];
+   for(int i =0;i<10;i++)
+   {
+       cin>>arr[i];
+       
+   }
+   int small;
+   small=arr[0];
+   for(int j=0;j<10;j++)
+   {
+       if(arr[j]<small)
+       {
+           small=arr[j];
+       }
+   }
+   cout<<small;
+   
+
+    return 0;
+}
+
